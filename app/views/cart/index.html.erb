@@ -1,0 +1,25 @@
+<h1>Cart</h1>
+
+
+<a href='/clear'> Clear Cart </a>
+<p id="notice"><%= notice %></p>
+
+<% total=0 %>
+<ul>
+  <% @cart.each do | id, qauntity | %>
+    <% product = Product.find_by_id(id) %>
+
+    <li>
+      <%= link_to product.title, product %>
+      <br>
+      Price:  <%= number_to_currency(product.price, :unit => '$') %>
+      <br>
+      Qauntity:   <%= qauntity %>
+    </li>
+    <% total += qauntity * product.price %>
+  <% end %>
+  <br>
+  TOTAL:  <%= number_to_currency(total, :unit => '$') %>
+</ul>
+
+<a href='/checkout' > Check Out </a>
