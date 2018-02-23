@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
+    # If the value entered in the textfield matches any of the product titles then that product will be displayed, else all the products will get displayed
     if params[:search]
       @products = Product.search(params[:search]).order("created_at DESC")
     else
@@ -39,20 +40,6 @@ class ProductsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def search
-    puts 'hello'
-
-    products = Product.all
-
-    products.each do | product |
-      if product[:name] == searchbox.value then
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-      else
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
       end
     end
   end

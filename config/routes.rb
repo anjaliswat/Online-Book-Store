@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  get 'shopper/new'
+  get 'order/checkout'
   get '/cart' => 'cart#index'
   get '/clear' => 'cart#clear'
   get '/cart/:id' => 'cart#add'
@@ -7,7 +10,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :products
-  root 'page#home'
+  root 'products#index'
 
   get 'page/about'
 

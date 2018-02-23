@@ -1,34 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class = "image">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+  <p>
+    <strong> </strong>
+    <img src="/assets/<%=@product.image_url %>" width="200" height="200">
+  </p>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class = "products">
+  <p>
+    <strong>Title:</strong>
+    <%= @product.title %>
+  </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @product.category %>
+  </p>
 
-<p>
-  <strong>Subcategory:</strong>
-  <%= @product.subcategory %>
-</p>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+  <% end %>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <%= link_to 'Back', products_path %>
+</div>

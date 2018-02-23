@@ -1,25 +1,42 @@
-<h1>Cart</h1>
+<h1 class="heading">Cart</h1>
 
+<div class="cartproducts">
 
-<a href='/clear'> Clear Cart </a>
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<% total=0 %>
-<ul>
-  <% @cart.each do | id, qauntity | %>
-    <% product = Product.find_by_id(id) %>
+  <!-- The variable sum is defined to store the total price of the products inside the cart -->
+  <% sum=0 %>
+  <ul>
+    <% @cart.each do | id, quantity | %>
+  <!-- This will go through each product in the cart and access them by product id -->
+      <% product = Product.find_by_id(id) %>
 
-    <li>
-      <%= link_to product.title, product %>
+      <li>
+        <p class="productTitle"><b><%= product.title %></p></b>
+        <br>
+        <img src="/assets/<%=product.image_url %>" width="150" height="150">
+        <br>
+        <br>
+        <br>
+        Price:  <%= number_to_currency(product.price, :unit => '$') %>
+        <br>
+  <!-- If one product is add one or more times, the amount of times it has been added will be displayed in qauntity -->
+        Quantity:   <%= quantity %>
+      </li>
       <br>
-      Price:  <%= number_to_currency(product.price, :unit => '$') %>
       <br>
-      Qauntity:   <%= qauntity %>
-    </li>
-    <% total += qauntity * product.price %>
-  <% end %>
-  <br>
-  TOTAL:  <%= number_to_currency(total, :unit => '$') %>
-</ul>
+      <% sum += quantity * product.price %>
+    <% end %>
+    <br>
+    <b>TOTAL:</b>  <%= number_to_currency(sum, :unit => '$') %>
+    <br>
+    <br>
+    <div class = 'cartButtons'>
+      <a href='/products'> Continue Shopping </a>
+      <a href='/clear'> Clear Cart </a>
+      <a href='/checkout' > Check Out </a>
+    </div>
+  </ul>
 
-<a href='/checkout' > Check Out </a>
+
+</div>

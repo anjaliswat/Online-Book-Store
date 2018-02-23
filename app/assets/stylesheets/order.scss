@@ -1,17 +1,17 @@
-// Place all the styles related to the cart controller here.
+// Place all the styles related to the order controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.cartproducts {
-  padding-top: 20px;
-  margin-left: 200px;
-}
-
-.cartButtons a {
+.continueShopping a {
   text-decoration: none;
   border-style: solid;
   border-width: 1px;
-  margin-left: 5px;
-  font: black;
+  border-radius: 5px;
+}
+
+.placeOrder a {
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 5px;
 }

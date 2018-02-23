@@ -1,3 +1,40 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.products {
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+.productTable {
+  padding-left: 180px;
+}
+
+.searchFor{
+  font-style: bold;
+}
+
+.addCart a{
+  text-decoration: none;
+  height: 10px;
+  width:10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+
+}
+
+.productTitle {
+  font-size: 15px;
+}
+
+.book {
+  display: inline-block;
+}
+
+.new-product {
+  margin-top: -30px;
+  margin-left: 1000px;
+}
