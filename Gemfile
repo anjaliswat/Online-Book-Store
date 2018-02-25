@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.3.4'
 
+gem 'aws-sdk', '~> 2'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
