@@ -24,7 +24,7 @@
             <div class = "book">
               <%= link_to product do %>
                 <p class= "image"> <img src="<%=product.image_url %>" width="150" height="150"> </p>
-                <p class = "info"> <b><%= product.title %> - $<%= product.price %> </b> </p>
+                <b> <%= product.title %> - $<%= product.price %> </b>
               <% end %>
 
   <!-- This condition is for authentication purposes, only the admin can login and edit or delete the products. If not logged in, only show and add to cart functions will be displayed -->
