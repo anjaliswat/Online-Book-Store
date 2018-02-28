@@ -28,13 +28,13 @@
           <% end %>
 
   <!-- This condition is for authentication purposes, only the admin can login and edit or delete the products. If not logged in, only show and add to cart functions will be displayed -->
-            <% if user_signed_in? %>
-                 <p class="edit">
-                  <%= link_to 'Edit', edit_product_path(product) %>
-                  <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-                 </p>
-            <% end %>
-          </div>
+              <% if user_signed_in? %>
+                   <p class="edit">
+                    <%= link_to 'Edit', edit_product_path(product) %>
+                    <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                   </p>
+              <% end %>
+            </div>
       <% end %>
     </div>
   <br>
