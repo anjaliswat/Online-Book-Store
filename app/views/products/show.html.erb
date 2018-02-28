@@ -28,6 +28,8 @@
     <%= @product.category %>
   </p>
 
+  <a href='/cart/<%= @product.id %>'> Add To Cart </a> </p>
+
   <% if user_signed_in? %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
   <% end %>

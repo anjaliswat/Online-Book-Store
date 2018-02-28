@@ -25,10 +25,7 @@
             <div class = "book">
               <p class= "image"> <img src="<%=product.image_url %>" width="150" height="150"> </p>
               <p class = "info"> <b><%= product.title %> - $<%= product.price %> </b> </p>
-
-
-              <a href='/cart/<%= product.id %>'> Add To Cart </a> </p>
-          <% end %>    
+          <% end %>
 
   <!-- This condition is for authentication purposes, only the admin can login and edit or delete the products. If not logged in, only show and add to cart functions will be displayed -->
             <% if user_signed_in? %>
