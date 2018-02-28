@@ -32,11 +32,12 @@
 
 .book {
   display: inline-block;
+  margin-right: 10px;
   text-decoration: none;
 }
 
 .book:hover {
-  color:black;
+  font-style: black;
 }
 
 .new-product {
