@@ -31,13 +31,15 @@
 }
 
 .book {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.book:hover {
+  color:black;
 }
 
 .new-product {
   margin-top: -30px;
   margin-left: 1000px;
-}
-
-.book p:hover {
-  text-decoration: none;
 }
