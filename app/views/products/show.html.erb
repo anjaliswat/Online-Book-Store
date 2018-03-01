@@ -28,11 +28,11 @@
     <%= @product.category %>
   </p>
 
-  <a href='/cart/<%= @product.id %>'> Add To Cart </a> </p>
+  <p class="addcart"> <a href='/cart/<%= @product.id %>'> Add To Cart </a> </p>
 
   <% if user_signed_in? %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
   <% end %>
 
-  <%= link_to 'Back', products_path %>
+  <p class="backhome"> <%= link_to 'Back', products_path %> </p>
 </div>
